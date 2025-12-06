@@ -1,0 +1,6 @@
+requests
+nonebot2
+nonebot-adapter-onebot
+pillow
+pyyaml
+lunardate

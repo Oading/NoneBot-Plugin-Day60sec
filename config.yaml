@@ -1,1 +1,6 @@
-api_token:""
+url: "https://v3.alapi.cn/api/zaobao"
+querystring:
+  token: ""
+  format: "json"
+headers:
+  Content-Type: "application/json"
