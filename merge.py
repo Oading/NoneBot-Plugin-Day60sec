@@ -10,12 +10,12 @@ def generate_image_from_json():
     BASE_DIR = Path(__file__).parent
     IMG_WIDTH = 1920
     IMG_LENGTH = 2500
-    NEWS_START_Y = 900
-    LINE_SPACING = 16
-    NEWS_SPACING = 35
+    NEWS_START_Y = 850
+    LINE_SPACING = 17
+    NEWS_SPACING = 34
     TEXT_COLOR = (0, 0, 0)
-    LEFT_MARGIN = 100
-    RIGHT_MARGIN = 100
+    LEFT_MARGIN = 85
+    RIGHT_MARGIN = 85
     X1, Y1 = 1487, 287  # 星期
     X2, Y2 = 1159, 335  # 农历
     X3, Y3 = 1501, 393  # 日期
@@ -52,7 +52,7 @@ def generate_image_from_json():
     bg_path = BASE_DIR / "assets/background.png"
     news_list = json_data["data"]["news"]
     font_path = BASE_DIR / "assets/fonts/SourceHanSansCN-Regular.otf"
-    font_size = 30
+    font_size = 33
     font = ImageFont.truetype(font_path, font_size)
 
     img = Image.open(bg_path).convert("RGBA")
@@ -60,7 +60,7 @@ def generate_image_from_json():
 
     font_size_weekday = 100
     font_size_lunarday = 50
-    font_size_today = 35
+    font_size_today = 34
     font1 = ImageFont.truetype(
         str(font_path), font_size_weekday)
     font2 = ImageFont.truetype(
@@ -73,7 +73,7 @@ def generate_image_from_json():
 
     y = NEWS_START_Y
     for news in news_list:
-        lines = textwrap.wrap(news, width=70)
+        lines = textwrap.wrap(news, width=55)
         for line in lines:
             draw.text((LEFT_MARGIN, y), line, fill=TEXT_COLOR, font=font)
             y += font_size + LINE_SPACING

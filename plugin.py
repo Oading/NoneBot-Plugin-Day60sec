@@ -7,7 +7,7 @@ import asyncio
 
 from . import request, merge
 
-reqday60s = on_command("reqday60s", aliases={"！reqday60s"}, priority=5)
+reqday60s = on_command("reqday60s", aliases={"!reqday60s","！reqday60s","每日早报"}, priority=5)
 
 
 @reqday60s.handle()
