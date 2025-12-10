@@ -4,3 +4,5 @@ nonebot-adapter-onebot
 pillow
 pyyaml
 lunardate
+nonebot-plugin-apscheduler
+APScheduler

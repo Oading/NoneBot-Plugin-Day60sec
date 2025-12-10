@@ -4,3 +4,5 @@ querystring:
   format: "json"
 headers:
   Content-Type: "application/json"
+daily_report_groups:
+  - 123456789
